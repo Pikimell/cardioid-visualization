@@ -22,5 +22,77 @@
     <link rel="stylesheet" href="./style/reset.css" />
     <link rel="stylesheet" href="./style/style.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="box">
+      <form class="control-form js-control-form">
+        <label for="len-circles-x">
+          Count Circles X:
+          <input
+            class="form-control"
+            type="number"
+            placeholder="Enter Len"
+            name="len-circles-x"
+            value="5"
+            min="2"
+          />
+        </label>
+        <label for="len-circles-y">
+          Count Circles Y:
+          <input
+            class="form-control"
+            type="number"
+            placeholder="Enter Len"
+            name="len-circles-y"
+            value="5"
+            min="2"
+          />
+        </label>
+        <label for="cirlces-radius">
+          Circles Radius:
+          <input
+            class="form-control"
+            type="number"
+            placeholder="Enter Radius"
+            name="cirlces-radius"
+            value="50"
+            min="10"
+          />
+        </label>
+        <label for="cirlces-width">
+          Width Brush:
+          <input
+            class="form-control"
+            type="number"
+            placeholder="Enter Width"
+            name="cirlces-width"
+            value="2"
+            min="1"
+            max="50"
+          />
+        </label>
+        <label for="cirlces-color">
+          Color Brush:
+          <input
+            class="form-control"
+            type="color"
+            placeholder="Enter Color"
+            name="cirlces-color"
+          />
+        </label>
+        <button class="btn btn-primary js-btn-reload">Reload</button>
+      </form>
+
+      <div class="canvas-container">
+        <canvas
+          class="js-canvas2"
+          height="800"
+          width="1500"
+          style="background-color: white"
+        >
+        </canvas>
+        <canvas class="js-canvas1" height="800" width="1500"> </canvas>
+      </div>
+    </div>
+    <button class="js-save-btn">SAVE PNG</button>
+  </body>
 </html>
