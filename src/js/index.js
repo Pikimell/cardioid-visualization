@@ -6,6 +6,7 @@ const refs = {
   canvas: document.querySelector('.js-canvas1'),
   canvas2: document.querySelector('.js-canvas2'),
   saveBtn: document.querySelector('.js-save-btn'),
+  form: document.querySelector('.js-control-form'),
 };
 
 const options = {
@@ -72,16 +73,6 @@ function drawCircles() {
       const x = options.circlesX[i].currentPoint.x;
       const y = options.circlesY[j].currentPoint.y;
       drawPoint(x, y);
-
-      // drawLine(options.circlesX[i].currentPoint, {
-      //   x: x,
-      //   y: options.circlesY[j].currentPoint.y,
-      // });
-
-      // drawLine(options.circlesY[j].currentPoint, {
-      //   x: options.circlesX[i].currentPoint.x,
-      //   y: options.circlesY[j].currentPoint.y,
-      // });
     }
   }
 }
@@ -115,10 +106,25 @@ refs.saveBtn.addEventListener('click', () => {
   downloadLink.click();
 });
 
-document.querySelector('.js-control-form').addEventListener('submit', e => {
+refs.form.addEventListener('submit', e => {
   e.preventDefault();
   Circle.clearCanvas();
   const canvas = refs.canvas2.getContext('2d');
   canvas.clearRect(0, 0, 10000, 10000);
   reload(init, options, e.target);
+  updateCanvasSize(options);
 });
+
+function updateCanvasSize(options) {
+  const countX = options.LENX;
+  const countY = options.LENY;
+  const radius = options.CIRCLE_RADIUS;
+
+  const width = countX * (radius * 2 + 20);
+  const height = countY * (radius * 2 + 20);
+
+  refs.canvas.width = width;
+  refs.canvas.height = height;
+  refs.canvas2.width = width;
+  refs.canvas2.height = height;
+}
