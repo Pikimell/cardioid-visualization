@@ -1,0 +1,78 @@
+/* ================================================== */
+body {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(161, 161, 161);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+
+.box {
+  backdrop-filter: blur(20px);
+  background: #ffffff6c;
+  border-radius: 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px;
+  margin: 10px;
+  height: fit-content;
+  width: fit-content;
+  overflow: auto;
+  max-width: 90vw;
+  min-width: 600px;
+  max-height: 90vh;
+}
+/* ================================================== */
+
+/* ================================================== */
+.canvas-container {
+  width: 90vw;
+  height: 90%;
+  min-height: 80vh;
+  border-radius: 0;
+  box-sizing: border-box;
+  position: relative;
+  margin: 10px;
+  overflow: auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.371);
+  border-radius: 10px;
+}
+
+.canvas-container > canvas {
+  border-radius: 10px;
+  padding: 20px;
+}
+.canvas-container > canvas:nth-child(2) {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+/* ================================================== */
+
+/* ================================================== */
+.control-form {
+  min-width: 270px;
+  width: 15%;
+  height: fit-content;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.371);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 10px;
+}
+
+.control-form > * {
+  margin: 10px;
+}
+/* ================================================== */
